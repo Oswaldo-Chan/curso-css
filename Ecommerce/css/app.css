@@ -57,3 +57,14 @@ img {
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
 }
+.categoria a {
+    display: block;
+    text-align: center;
+    padding: 2rem;
+    font-size: 2rem;
+}
+.categoria a:hover {
+    background-color: #037bc0;
+    color: #ffffff;
+    border-radius: 0 0 1rem 1rem;
+}
