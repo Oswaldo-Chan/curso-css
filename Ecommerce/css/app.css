@@ -14,8 +14,13 @@ a {
     text-decoration: none;
     color: #000000;
 }
+img {
+    max-width: 100%;
+    display: block;
+}
 .contenedor {
-    max-width: 120rem;
+    width: 120rem;
+    max-width: 95%;
     margin: 0 auto; /** margin-inline: auto **/
 
 }
@@ -33,6 +38,8 @@ a {
 }
 .nav-principal {
     padding: 2rem 0;
+    display: flex;
+    justify-content: space-evenly;
 }
 .hero {
     height: 55rem;
@@ -40,4 +47,13 @@ a {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
+}
+/** Categorias **/
+.categorias h2 {
+    text-align: center;
+}
+.listado-categorias {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
 }
