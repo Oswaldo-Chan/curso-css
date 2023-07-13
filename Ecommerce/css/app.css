@@ -9,6 +9,10 @@ html {
 /** Globales **/
 body {
     font-size: 1.8rem;
+    font-family: 'Raleway', sans-serif;
+}
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
 }
 a {
     text-decoration: none;
