@@ -1,3 +1,43 @@
-h1 {
-    color: blue;
+html {
+    box-sizing: border-box;
+    height: 100%;
+    font-size: 62.5%;
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+/** Globales **/
+body {
+    font-size: 1.8rem;
+}
+a {
+    text-decoration: none;
+    color: #000000;
+}
+.contenedor {
+    max-width: 120rem;
+    margin: 0 auto; /** margin-inline: auto **/
+
+}
+/** Header y Navegacion **/
+.nombre-sitio {
+    margin-top: 5rem;
+    margin-bottom: 50px;
+    text-align: center;
+}
+.nombre-sitio span {
+    color: #037bc0;
+}
+.contenedor-nav {
+    border: .1rem solid #e1e1e1;
+}
+.nav-principal {
+    padding: 2rem 0;
+}
+.hero {
+    height: 55rem;
+    background-image: url(../img/principal.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
 }
