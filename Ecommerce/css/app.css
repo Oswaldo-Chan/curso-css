@@ -91,4 +91,14 @@ img {
     background-size: 100%, 120rem;
     background-position: left center;
     padding: 10rem 0;
+    margin: 3rem 0;
+}
+.sobre-nosotros-grid {
+    display: flex;
+    justify-content: flex-end;
+}
+.sobre-nosotros-info {
+    flex-basis: 50%;
+    padding-left: 6rem;
+    color: #ffffff;
 }
