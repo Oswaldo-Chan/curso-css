@@ -253,3 +253,9 @@ img {
 .entrada-contenido {
     text-align: justify;
 }
+/** Pagina Entrada **/
+.contenido-entrada-blog {
+    width: 60rem;
+    margin: 0 auto;
+    line-height: 2;
+}
