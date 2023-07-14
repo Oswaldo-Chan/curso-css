@@ -183,3 +183,27 @@ img {
     font-size: 2.8rem;
     font-weight: 900;
 }
+/** Footer **/
+.footer {
+    border-top: .1rem solid #e1e1e1;
+    margin-top: 3rem;
+}
+.footer-navegaciones {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 2rem;
+}
+.footer-navegaciones h3 {
+    margin: 5rem 0 1rem 0;
+}
+.footer-nav a {
+    display: block;
+    line-height: 2;
+}
+.footer-nav a:hover {
+    color: #037bc0;
+}
+.footer .copyright {
+    text-align: center;
+    padding: 2rem 0;
+}
