@@ -39,6 +39,23 @@ img {
     margin: 0 auto; /** margin-inline: auto **/
 
 }
+.btn {
+    display: block;
+    border: none;
+    background-color: #8cbc00;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: 900;
+    width: 100%;
+    margin: 0 auto;
+    padding: 1rem;
+    transition: background-color 300ms ease;
+    font-size: 1.8rem;
+}
+.btn:hover {
+    cursor: pointer;
+    background-color: #769d00;
+}
 /** Header y Navegacion **/
 .nombre-sitio {
     margin: 0 5rem;
@@ -101,4 +118,68 @@ img {
     flex-basis: 50%;
     padding-left: 6rem;
     color: #ffffff;
+}
+/** Contenido Principal (productos) **/
+.contenido-principal h2 {
+    margin: 3rem 0;
+    text-align: center;
+}
+.listado-productos {
+    display: grid;
+    grid-template-areas: 
+    "p1 p1 p1 p1 p1 p1"
+    "p2 p2 p2 p3 p3 p3"
+    "p4 p4 p5 p5 p6 p6";
+    gap: 2rem;
+}
+.producto:nth-child(1) {
+    grid-area: p1;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+.producto:nth-child(1) .producto-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.producto:nth-child(2) {
+    grid-area: p2;
+}
+.producto:nth-child(3) {
+    grid-area: p3;
+}
+.producto:nth-child(4) {
+    grid-area: p4;
+}
+.producto:nth-child(5) {
+    grid-area: p5;
+}
+.producto:nth-child(6) {
+    grid-area: p6;
+}
+.producto:nth-child(1) img {
+    height: 43rem;
+    width: 100%;
+    object-fit: cover;
+}
+.producto:nth-child(2) img,
+.producto:nth-child(3) img {
+    height: 30rem;
+    width: 100%;
+    object-fit: cover;
+}
+.producto {
+    background-color: #037bc0;
+}
+.producto-info {
+    text-align: center;
+    color: #ffffff;
+    padding: 2rem;
+}
+.producto-info p {
+    margin: 2rem 0;
+}
+.producto-info .precio {
+    font-size: 2.8rem;
+    font-weight: 900;
 }
