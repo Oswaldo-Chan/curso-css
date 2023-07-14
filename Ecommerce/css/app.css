@@ -47,14 +47,18 @@ img {
     text-transform: uppercase;
     font-weight: 900;
     width: 100%;
-    margin: 0 auto;
     padding: 1rem;
     transition: background-color 300ms ease;
     font-size: 1.8rem;
+    text-align: center;
 }
 .btn:hover {
     cursor: pointer;
     background-color: #769d00;
+}
+/** Utilidades **/
+.max-width-30 {
+    max-width: 30rem;
 }
 /** Header y Navegacion **/
 .nombre-sitio {
@@ -214,4 +218,38 @@ img {
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     column-gap: 4rem;
     align-items: center;
+}
+/** PAGINA Blog **/
+.blog {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+}
+.blog h3 {
+    margin-bottom: 3rem;
+}
+.entrada {
+    padding-bottom: 3rem;
+    border-bottom: .2rem solid #e1e1e1;
+    margin-bottom: 2rem;
+}
+.entrada:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+.entrada-info {
+    display: flex;
+    justify-content: space-between;
+}
+.entrada-fecha,
+.entrada-autor {
+    font-weight: 700;
+}
+.entrada-fecha span,
+.entrada-autor span {
+    color: #037bc0;
+}
+.entrada-contenido {
+    text-align: justify;
 }
