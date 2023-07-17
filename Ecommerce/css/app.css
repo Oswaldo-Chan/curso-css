@@ -273,3 +273,37 @@ img {
     width: 40rem;
     object-fit: cover;
 }
+/** Pagina Formulario **/
+.formulario {
+    width: 60rem;
+    margin: 0 auto;
+}
+.formulario fieldset {
+    border: .1rem solid #000000;
+    margin-bottom: 2rem;
+}
+.formulario legend {
+    background-color: #005485;
+    width: 100%;
+    text-align: center;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: 900;
+    padding: 1rem;
+    margin-bottom: 4rem;
+}
+.campo {
+    display: flex;
+    margin-bottom: 2rem;
+}
+.campo label {
+    flex-basis: 10rem;
+}
+.campo textarea,
+.campo select,
+.campo input:not([type="radio"]) {
+    flex: 1;
+    border: .1rem solid #e1e1e1;
+    border-radius: .5rem;
+    padding: 1rem;
+}
