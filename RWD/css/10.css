@@ -1,0 +1,4 @@
+img { /** snippet para imagenes responsive **/
+    max-width: 100%;
+    display: block;
+}
