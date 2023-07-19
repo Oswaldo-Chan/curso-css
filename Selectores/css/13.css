@@ -1,0 +1,12 @@
+ul li:nth-child(odd) {
+    border: .5rem solid rgb(178, 81, 81);
+}
+ul li:nth-child(even) {
+    border: .5rem solid rgb(89, 81, 178);
+}
+ul li:nth-child(3) {
+    color: rgb(24, 117, 183);
+}
+ul li:nth-child(4n + 1) {
+    background-color: rgb(215, 203, 94);
+}

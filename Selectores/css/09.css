@@ -1,0 +1,3 @@
+.admin div + p { /** busca la clase admin, luego la etiqueda div y se le asigna el estilo a p **/
+    background-color: red;
+}
