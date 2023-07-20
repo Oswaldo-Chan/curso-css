@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechPRO | Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;900&family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+    <header class="header">
+        <div class="contenedor contenido-header">
+            <div class="imagen-header">
+                <picture>
+                    <source
+                        sizes="1920w" 
+                        srcset="img/header.avif 1920w" 
+                        type="image/avif">
+                    <source
+                        sizes="1920w" 
+                        srcset="img/header.webp 1920w" 
+                        type="image/webp">
+                    <source
+                        sizes="1920w" 
+                        srcset="img/header.jpg 1920w" 
+                        type="image/jpeg">
+                    <img loading="lazy" decoding="async" src="img/header.jpg" lazyalt="imagen" width="1000" height="600">
+                </picture>
+            </div> <!-- .imagen-header -->
+
+            <div class="texto-header">
+                <p class="tagline-producto">Sonido Profesional</p>
+                <h1 class="nombre-producto degradado-verde">TechPRO</h1>
+                <p class="descripcion">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias odit reprehenderit ut ea cumque 
+                ad aperiam molestiae, deserunt beatae, nihil doloribus maiores quos vero rerum earum, dolorum enim in? Distinctio?</p>
+                <p class="precio-producto">Desde <span>$299</span></p>
+            </div>
+        </div>
+    </header>
+    
+    <section>
+        <div class="contenedor beneficios">
+            <div class="beneficio">
+                <div class="imagen-beneficio">
+                    <img src="img/icono-sonido.svg" alt="icono sonido">
+                </div>
+                <h3 class="titulo-beneficio">Gran Sonido</h3>
+                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, 
+                by injected humour, or randomised words which don't look even slightly believable.</p>
+            </div>
+
+            <div class="beneficio">
+                <div class="imagen-beneficio">
+                    <img src="img/icono-garantia.svg" alt="icono garantia">
+                </div>
+                <h3 class="titulo-beneficio">Garantía de por vida</h3>
+                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, 
+                by injected humour, or randomised words which don't look even slightly believable.</p>
+            </div>
+
+            <div class="beneficio">
+                <div class="imagen-beneficio">
+                    <img src="img/icono-bateria.svg" alt="icono horas">
+                </div>
+                <h3 class="titulo-beneficio">+20 Horas de Batería</h3>
+                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, 
+                by injected humour, or randomised words which don't look even slightly believable.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="sobre-tech">
+        <div class="contenedor sobre-tech-grid">
+            <div class="sobre-tech-contenido">
+                <h2>Sobre los <span>TechPRO</span></h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque praesentium esse omnis inventore hic vel libero laboriosam. Impedit et praesentium optio ut aliquam laborum, ipsum neque ratione dolorum libero tempora.</p>
+            </div>
+        </div>
+    </section>
+
+    <main class="auriculares">
+        <h2 class="degradado-verde">Elige tus TechPRO</h2>
+
+        <div class="contenedor auriculares-grid">
+            <div class="auricular modelo-x">
+                <div class="auricular-info">
+                    <h3>TechPRO X</h3>
+                    <p class="precio">$249</p>
+                </div>
+            </div>
+
+            <div class="auricular modelo-y">
+                <div class="auricular-info">
+                    <h3>TechPRO Y</h3>
+                    <p class="precio">$349</p>
+                </div>
+            </div>
+
+            <div class="auricular modelo-z">
+                <div class="auricular-info">
+                    <h3>TechPRO Z</h3>
+                    <p class="precio">$499</p>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

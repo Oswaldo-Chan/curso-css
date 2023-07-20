@@ -1,0 +1,281 @@
+:root {
+    /** Fuentes **/
+    --fuente-principal: 'Roboto', sans-serif;
+    --fuente-secundaria: 'Lato', sans-serif;
+    /** Colores **/
+    --primario: #1073BA;
+    --secundario: #00DA55;
+    --gris: #3B3B3B;
+    --blanco: #f5f5f5;
+    --negro: #1F1E1E;
+    --gris-claro: #e1e1e1;
+    /** Otros **/
+    --separacion: 5rem;
+}
+html {
+    box-sizing: border-box;
+    height: 100%;
+    font-size: 62.5%;
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+body {
+    font-family: var(--fuente-principal);
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+/** Globales **/
+h1 {
+    font-size: clamp(3rem, -0.8rem + 10vw, 5rem); /** 4.4 3.6 2.8 **/
+}
+h2 {
+    font-size: clamp(2.5rem, -0.8rem + 10vw, 4rem);
+}
+h3 {
+    font-size: clamp(2rem, -0.8rem + 10vw, 3rem);
+}
+h1,
+h2,
+h3 {
+    font-weight: 900;
+    font-family: var(--fuente-secundaria);
+    margin: calc(var(--separacion) / 2) 0;
+}
+a {
+    text-decoration: none;
+}
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+.contenedor {
+    max-width: 120rem;
+    width: 90%;
+    margin: 0 auto;
+}
+/** Utilidades **/
+.text-center {
+    text-align: center;
+}
+/** Degradados **/
+.degradado-verde {
+    background: linear-gradient(to right, var(--primario) 0%, var(--secundario) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+/** Header **/
+.header {
+    background-color: var(--negro);
+    padding: calc(var(--separacion) * 3) 0;
+    color: var(--blanco);
+}
+.texto-header {
+    padding-top: var(--separacion);
+    text-align: center;
+}
+.texto-header p {
+    margin: 0;
+}
+.tagline-producto {
+    font-size: 3rem;
+    font-weight: 900;
+}
+.nombre-producto {
+    margin: 0;
+    font-size: clamp(4.5rem, -0.8rem + 10vw, 10rem);
+}
+.precio-producto span {
+    font-size: 6rem;
+    font-weight: 700;
+}
+@media (min-width: 768px) {
+    .contenido-header {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .texto-header {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 0;
+        text-align: left;
+    }
+    .nombre-producto {
+        line-height: 1;
+    }
+}
+/** Seccion Beneficios **/
+.beneficios {
+    padding: var(--separacion) 0;
+    display: grid;
+    gap: 2.5rem;
+}
+.beneficio {
+    text-align: center;
+}
+.imagen-beneficio {
+    width: 5rem;
+    margin: 0 auto;
+}
+.titulo-beneficio {
+    text-transform: uppercase;
+    color: var(--primario);
+}
+@media (min-width: 768px) {
+    .beneficios {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+    .imagen-beneficio {
+        width: 20%;
+    }
+    .titulo-beneficio, 
+    .beneficio p {
+        margin: calc(var(--separacion) / 2) 0;
+    }
+}
+/** Seccion Sobre Tech **/
+.sobre-tech {
+    background-image: linear-gradient(to bottom, transparent 50%, var(--primario) 0%),
+    url(../img/imagen-mujer.jpg);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 100%, 120rem;
+}
+.sobre-tech-grid {
+    display: grid;
+    grid-template-rows: repeat(2, 40rem);
+    row-gap: var(--separacion);
+}
+.sobre-tech-contenido {
+    display: grid;
+    align-content: center;
+    grid-row: 2 / 3;
+    padding: 2.5rem 0 var(--separacion) 0;
+    color: var(--blanco);
+}
+.sobre-tech h2 {
+    font-size: 4rem;
+}
+.sobre-tech p {
+    font-size: 1.8rem;
+    line-height: 1.5;
+    margin-top: 0;
+}
+@media (min-width: 768px) {
+    .sobre-tech {
+        background-image: linear-gradient(to left, transparent 50%, var(--primario) 0%),
+        url(../img/imagen-mujer.jpg);
+        background-position: right center;
+    }
+    .sobre-tech-grid {
+        grid-template-rows: unset;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: unset;
+        column-gap: var(--separacion);
+        padding: var(--separacion) 0;
+    }
+    .sobre-tech-contenido {
+        padding: 0;
+    }
+}
+@media (min-width: 1600px) {
+    .sobre-tech {
+        background-size: 100%, 150rem;
+    }
+}
+/** Seccion Principal (Auriculares) **/
+.auriculares {
+    padding: var(--separacion) 0;
+}
+.auriculares h2 {
+    text-align: center;
+    font-size: 4rem;
+}
+.auriculares-grid {
+    display: flex;
+    flex-direction: column-reverse;
+}
+.auricular {
+    background-repeat: no-repeat;
+    background-position: center top calc(100% - 2rem);
+    background-size: 15rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--gris-claro);
+    border-radius: 2.5rem;
+    color: var(--primario);
+    margin-bottom: 2rem;
+    padding-bottom: 20rem;
+    min-height: 20rem;
+    transition: all 300ms;
+    text-align: center;
+}
+.auricular:hover {
+    transform: scale(1.1);
+    background-size: 25rem;
+}
+.auricular .precio {
+    font-size: 4rem;
+    font-weight: 900;
+    line-height: 0;
+}
+.auricular:first-of-type {
+    margin-bottom: 0;
+}
+.modelo-x {
+    background-image: url(../img/modelo-x.svg);
+}
+.modelo-y {
+    background-image: url(../img/modelo-y.svg);
+}
+.modelo-z {
+    background-image: url(../img/modelo-z.svg);
+    background-color: var(--primario);
+    color: var(--blanco);
+}
+.modelo-z .precio {
+    font-size: 6rem;
+}
+@media (min-width: 520px) {
+    .auricular {
+        padding-left: 4rem;
+        padding-bottom: 0;
+        text-align: left;
+        background-position: 90% center;
+    }
+}
+@media (min-width: 768px) {
+    .auriculares h2 {
+        font-size: 6rem;
+        margin-bottom: 5rem;
+    }
+    .auriculares-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2.5rem;
+    }
+    .auricular {
+        margin-bottom: 0;
+    }
+    .modelo-z {
+        grid-column: 2 / 3;
+        grid-row: 1 / 3;
+        background-size: 20rem;
+    }
+    .auricular:not(.modelo-z) h3 {
+        font-size: 2.5rem;
+    }
+}
+@media (min-width: 1200px) {
+    .modelo-z {
+        background-size: 25rem;
+    }
+    .modelo-z:hover {
+        background-size: 30rem;
+    }
+}
