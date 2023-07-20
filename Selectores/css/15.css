@@ -1,0 +1,7 @@
+.primer-letra::first-letter {
+    font-size: 10rem;
+    font-family:'Times New Roman', Times, serif
+}
+.primer-linea::first-line {
+    color: rgb(100, 159, 219);
+}

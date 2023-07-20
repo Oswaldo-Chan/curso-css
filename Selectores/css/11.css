@@ -1,0 +1,3 @@
+ul li:nth-child(1) { /** tambien usar first-child o first-of-type **/
+    border: .1rem solid #6c40dc;
+}

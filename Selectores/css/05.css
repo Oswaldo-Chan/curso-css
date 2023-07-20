@@ -1,0 +1,10 @@
+.texto {
+    color: blue;
+}
+#encabezado {
+    text-transform: uppercase;
+    color: rgb(164, 73, 73);
+}
+#encabezado.texto {
+    color: tomato;
+}

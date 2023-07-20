@@ -1,0 +1,4 @@
+ul li:last-of-type {
+    color: rgb(165, 117, 213);
+    border: .1rem solid #e1e1e1e1;
+}
