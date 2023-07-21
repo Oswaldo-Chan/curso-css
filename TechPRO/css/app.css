@@ -137,13 +137,23 @@ img {
         margin: calc(var(--separacion) / 2) 0;
     }
 }
-/** Seccion Sobre Tech **/
+/** Seccion Sobre TechPRO **/
 .sobre-tech {
-    background-image: linear-gradient(to bottom, transparent 50%, var(--primario) 0%),
-    url(../img/imagen-mujer.jpg);
     background-repeat: no-repeat;
     background-position: right;
     background-size: 100%, 120rem;
+}
+.notavif.notwebp .sobre-tech {
+    background-image: linear-gradient(to bottom, transparent 50%, var(--primario) 0%),
+    url(../img/imagen-mujer.jpg);
+}
+.webp .sobre-tech {
+    background-image: linear-gradient(to bottom, transparent 50%, var(--primario) 0%),
+    url(../img/imagen-mujer.webp);
+}
+.avif .sobre-tech {
+    background-image: linear-gradient(to bottom, transparent 50%, var(--primario) 0%),
+    url(../img/imagen-mujer.avif);
 }
 .sobre-tech-grid {
     display: grid;
@@ -167,9 +177,19 @@ img {
 }
 @media (min-width: 768px) {
     .sobre-tech {
+        background-position: right center;
+    }
+    .notavif.notwebp .sobre-tech {
         background-image: linear-gradient(to left, transparent 50%, var(--primario) 0%),
         url(../img/imagen-mujer.jpg);
-        background-position: right center;
+    }
+    .webp .sobre-tech {
+        background-image: linear-gradient(to left, transparent 50%, var(--primario) 0%),
+        url(../img/imagen-mujer.webp);
+    }
+    .avif .sobre-tech {
+        background-image: linear-gradient(to left, transparent 50%, var(--primario) 0%),
+        url(../img/imagen-mujer.avif);
     }
     .sobre-tech-grid {
         grid-template-rows: unset;
@@ -278,4 +298,102 @@ img {
     .modelo-z:hover {
         background-size: 30rem;
     }
+}
+/** Seccion Newsletter **/
+.newsletter {
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: 100%, 80rem;
+}
+.notavif.notwebp .newsletter {
+    background-image: linear-gradient(to bottom, transparent 50%, var(--blanco) 0%),
+    url(../img/newsletter.jpg);
+}
+.webp .newsletter {
+    background-image: linear-gradient(to bottom, transparent 50%, var(--blanco) 0%),
+    url(../img/newsletter.webp);
+}
+.avif .newsletter {
+    background-image: linear-gradient(to bottom, transparent 50%, var(--blanco) 0%),
+    url(../img/newsletter.avif);
+}
+.newsletter-contenido {
+    display: grid;
+    grid-template-rows: repeat(2, 45rem);
+    gap: var(--separacion);
+}
+.newsletter-texto {
+    grid-row: 2 / 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.input input {
+    width: 100%;
+    padding: 1rem;
+
+}
+.formulario input[type="submit"] {
+    width: 100%;
+    padding: 1.5rem;
+    background-color: var(--primario);
+    color: var(--blanco);
+    text-transform: uppercase;
+    font-size: clamp(1.5rem, -0.8rem + 10vw, 2rem);
+    font-weight: 900;
+    border: none;
+    cursor: pointer;
+}
+@media (min-width: 320px) {
+    .newsletter-contenido {
+        grid-template-rows: repeat(2, 40rem);
+
+    }
+}
+@media (min-width: 768px) {
+    .newsletter {
+        background-position: center, -20rem 0rem;
+        background-size: 100%, 100rem;
+        padding: 10rem 0;
+    }
+    .notavif.notwebp .newsletter {
+        background-image: linear-gradient(to right, transparent 50%, var(--blanco) 0%),
+        url(../img/newsletter.jpg);
+    }
+    .webp .newsletter {
+        background-image: linear-gradient(to right, transparent 50%, var(--blanco) 0%),
+        url(../img/newsletter.webp);
+    }
+    .avif .newsletter {
+        background-image: linear-gradient(to right, transparent 50%, var(--blanco) 0%),
+        url(../img/newsletter.avif);
+    }
+    .newsletter-contenido {
+        grid-template-rows: unset;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .newsletter-texto {
+        grid-row: unset;
+        grid-column: 2 / 3;
+    }
+}
+@media (min-width: 1600px) {
+    .newsletter {
+        background-size: 100%, 120rem;
+        background-size: center, 0% -30rem;
+    }
+}
+@media (min-width: 2000px) {
+    .newsletter {
+        background-size: 100%, 170rem;
+    }
+}
+/** Footer **/
+.footer p {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: var(--fuente-secundaria);
+    font-size: clamp(2rem, -0.8rem + 10vw, 2.4rem);
+    color: var(--primario);
+    padding: 2rem 0;
 }
