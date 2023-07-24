@@ -3,15 +3,19 @@ const {src, dest, watch, series, parallel} = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
+const sourcemaps = require('gulp-sourcemaps');
+const cssnano = require('cssnano');
 //imagenes
 const imagemin = require('gulp-imagemin');
-const webp = require('gulp-webp'); bn  
+const webp = require('gulp-webp');
 const avif = require('gulp-avif');
 
 function css(done) {
     src('src/scss/app.scss')
+        .pipe(sourcemaps.init())
         .pipe(sass().on('error', sass.logError))
-        .pipe(postcss([autoprefixer()]))
+        .pipe(postcss([autoprefixer(), cssnano()]))
+        .pipe(sourcemaps.write('.'))
         .pipe(dest('build/css'))
     done();
 }
