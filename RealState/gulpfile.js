@@ -20,6 +20,11 @@ function css( done ) {
 
     done();
 }
+
+function javascript() {
+    return src('src/js/**/*.js')
+        .pipe(dest('build/js'))
+}
 function imagenes() {
     return src('src/img/**/*')
         .pipe( imagemin({ optimizationLevel: 3 }) )
@@ -43,12 +48,14 @@ function versionAvif() {
 }
 function dev() {
     watch( 'src/scss/**/*.scss', css );
+    watch( 'src/js/**/*.js', javascript )
     watch( 'src/img/**/*', imagenes );
 }
 
 exports.css = css;
+exports.javascript = javascript;
 exports.dev = dev;
 exports.imagenes = imagenes;
 exports.versionWebp = versionWebp;
 exports.versionAvif = versionAvif;
-exports.default = series( imagenes, versionWebp, versionAvif, css, dev  );
+exports.default = series( imagenes, versionWebp, versionAvif, css, javascript, dev  );
