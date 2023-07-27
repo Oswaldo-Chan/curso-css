@@ -1,0 +1,35 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.header {
+    @include m.bgImage('../img/header.jpg', v.$secundarioOpacity);
+    padding: 5rem 0;
+
+    .logo {
+        margin: 0 auto;
+        max-width: 20rem;
+
+        @include m.tablet { 
+            margin: 0;
+        }
+    }
+    .contenido-header {
+        padding: 10rem 0;
+
+        @include m.desktop { 
+            padding: 15rem 0;
+        }
+        h1 {
+            font-size: 4.5rem;
+            color: v.$blanco;
+
+            @include m.tablet { 
+                max-width: 50%;
+                font-size: 6rem;
+            }
+            @include m.desktop { 
+                max-width: 40%;
+            }
+        }
+    }
+}
