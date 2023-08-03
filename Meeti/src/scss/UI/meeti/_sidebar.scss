@@ -1,0 +1,19 @@
+@use 'base/variables' as v;
+
+.sidebar {
+    &__contenido {
+        padding: 2rem;
+        background-color: v.$secundario;
+        text-align: center;
+    }
+    &__heading,
+    &__texto {
+        color: v.$blanco;
+    }
+    &__label {
+        font-weight: 700;
+    }
+    &__mapa {
+        width: 100%;
+    }
+}
